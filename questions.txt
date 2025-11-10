@@ -1,0 +1,358 @@
+UNIT 6
+1.	List some applications of deep learning.
+Computer Vision
+
+image classification (e.g. cat vs dog)
+
+object detection (e.g. find pedestrian, car etc.)
+
+face recognition
+
+medical image analysis (tumor detection, X-ray/MRI segmentation)
+
+Natural Language Processing
+
+sentiment analysis (positive/negative review)
+
+machine translation (Google Translate)
+
+text summarization
+
+speech-to-text (Alexa, Google Assistant)
+
+Recommendation Systems
+
+YouTube / Netflix video recommendations
+
+Amazon product recommendations
+
+Autonomous Vehicles
+
+self-driving cars (perception, lane detection, obstacle detection)
+
+Healthcare
+
+disease diagnosis from medical records and images
+
+drug discovery
+
+predicting patient risk
+
+Finance
+
+fraud detection
+
+algorithmic trading signals
+
+credit risk modeling
+
+Generative AI
+
+image generation (DALL-E, MidJourney)
+
+text generation (ChatGPT)
+
+music generation, video generation
+
+| Application Area         | Example                                                        |
+| ------------------------ | -------------------------------------------------------------- |
+| Image Classification     | Classifying an image as cat/dog using CNN                      |
+| Face Recognition         | Unlocking phone using face (FaceID)                            |
+| Object Detection         | Detecting pedestrians and traffic signals in self-driving cars |
+| Speech Recognition       | “Hey Siri / Ok Google” converting voice → text                 |
+| Machine Translation      | Translating English sentence to Hindi using Google Translate   |
+| Recommendation System    | Netflix recommending movies based on your watch history        |
+| Medical Diagnosis        | Detecting tumor in MRI scans using deep learning models        |
+| Chatbots / Generative AI | ChatGPT generating answer for your questions                   |
+
+
+2.	What is object detection?
+Object Detection is a fundamental task in computer vision that involves identifying and locating multiple objects within an image or video. Unlike image classification which labels an entire image, object detection not only classifies each object but also draws bounding boxes around them to indicate their position.
+The general working of object detection is:
+
+Input Image: The object detection process begins with image or video analysis.
+Pre-processing: Image is pre-processed to ensure suitable format for the model being used.
+Feature Extraction: The feature extractor is responsible for dissecting the image into regions and extracting features from each region.
+Classification: Each image region is classified into categories based on the extracted features.
+Localization: The model determines the bounding boxes for each detected object by calculating the coordinates for a box that encloses each object.
+Non-max Suppression: When the model identifies several bounding boxes for the same object, non-max suppression is used to handle these overlaps.
+Output: The process ends with the original image being marked with bounding boxes and labels that illustrate the detected objects and their categories.
+
+3.	What is sentiment analysis?
+Sentiment analysis is the process of classifying whether a block of text is positive, negative, or neutral. The goal that Sentiment mining tries to gain is to be analysed people’s opinions in a way that can help businesses expand. It focuses not only on polarity (positive, negative & neutral) but also on emotions (happy, sad, angry, etc.). It uses various Natural Language Processing algorithms such as Rule-based, Automatic, and Hybrid.
+Preprocessing
+Starting with collecting the text data that needs to be analysed for sentiment like customer reviews, social media posts, news articles, or any other form of textual content. The collected text is pre-processed to clean and standardize the data with various tasks:
+
+Removing irrelevant information (e.g., HTML tags, special characters).
+Tokenization: Breaking the text into individual words or tokens.
+Removing stop words (common words like "and," "the," etc. that don't contribute much to sentiment).
+Stemming or Lemmatization: Reducing words to their root form.
+Analysis
+Text is converted for analysis using techniques like bag-of-words or word embeddings (e.g., Word2Vec, GloVe).Models are then trained with labeled datasets, associating text with sentiments (positive, negative, or neutral).
+
+After training and validation, the model predicts sentiment on new data, assigning labels based on learned patterns.
+
+4.	What is Named Entity Recognition (NER)?
+Named entity recognition (NER)—also called entity chunking or entity extraction—is a component of natural language processing (NLP) that identifies predefined categories of objects in a body of text.
+
+These categories can include, but are not limited to, names of individuals, organizations, locations, expressions of times, quantities, medical codes, monetary values and percentages, among others. Essentially, NER is the process of taking a string of text (i.e., a sentence, paragraph or entire document), and identifying and classifying the entities that refer to each category.
+Rule-based approaches involve creating a set of rules for the grammar of a language. The rules are then used to identify entities in the text based on their structural and grammatical features. These methods can be time-consuming and may not generalize well to unseen data.
+Machine learning approaches involve training an AI-driven machine learning model on a labeled dataset using algorithms like conditional random fields and maximum entropy (two types of complex statistical language models). Techniques can range from traditional machine learning methods (e.g., decision trees and support vector machines) to more complex deep learning approaches, like recurrent neural networks (RNNs) and transformers. These methods generalize better to unseen data, but they require a large amount of labeled training data and can be computationally expensive.
+Hybrid approaches combine rule-based and machine learning methods to leverage the strengths of both. They can use a rule-based system to quickly identify easy-to-recognize entities and a machine learning system to identify more complex entities.
+
+Various steps involves in NER and are as follows:
+
+Analyzing the Text: It processes entire text to locate words or phrases that could represent entities.
+Finding Sentence Boundaries: It identifies starting and ending of sentences using punctuation and capitalization which helps in maintaining meaning and context of entities.
+Tokenizing and Part-of-Speech Tagging: Text is broken into tokens (words) and each token is tagged with its grammatical role which provides important clues for identifying entities.
+Entity Detection and Classification: Tokens or groups of tokens that match patterns of known entities are recognized and classified into predefined categories like Person, Organization, Location etc.
+Model Training and Refinement: Machine learning models are trained using labeled datasets and they improve over time by learning patterns and relationships between words.
+Adapting to New Contexts: A well-trained model can generalize to different languages, styles and unseen types of entities by learning from context.
+
+5.	How is LSTM used in NLP?
+Long Short-Term Memory Networks or LSTM in deep learning, is a sequential neural network that allows information to persist. It is a special type of Recurrent Neural Network which is capable of handling the vanishing gradient problem faced by RNN. LSTM was designed by Hochreiter and Schmidhuber that resolves the problem caused by traditional rnns and machine learning algorithms. LSTM Model can be implemented in Python using the Keras library.
+
+Let’s say while watching a video, you remember the previous scene, or while reading a book, you know what happened in the earlier chapter. RNNs work similarly; they remember the previous information and use it for processing the current input. The shortcoming of RNN is they cannot remember long-term dependencies due to vanishing gradient. LSTMs are explicitly designed to avoid long-term dependency problems.
+LSTM (Long Short-Term Memory) is a recurrent neural network (RNN) architecture widely used in Deep Learning. It excels at capturing long-term dependencies, making it ideal for sequence prediction tasks.
+
+Unlike traditional neural networks, LSTM incorporates feedback connections, allowing it to process entire sequences of data, not just individual data points. This makes it highly effective in understanding and predicting patterns in sequential data like time series, text, and speech.
+
+LSTM has become a powerful tool in artificial intelligence and deep learning, enabling breakthroughs in various fields by uncovering valuable insights from sequential data.
+How LSTMs are used in NLP
+Sentiment analysis: LSTMs can analyze a piece of text to determine its overall sentiment (e.g., positive, negative, or neutral) by processing the sequence of words and understanding their combined context.
+Text generation: By analyzing a sequence of words, an LSTM can predict the next most likely word to create coherent text. This is used in applications like predictive text.
+Language translation: An encoder-decoder LSTM architecture is used to first encode a sentence into a vector representation and then decode that vector into a translated sentence in another language.
+Speech recognition: LSTMs process sequential audio data to recognize spoken words and convert them into text by identifying patterns in the speech signals.
+Text summarization: LSTMs can be trained to process a longer text and generate a concise summary.
+Chatbots: By understanding the context of a conversation over multiple turns, LSTMs help chatbots provide more relevant and contextually appropriate responses. 
+Why LSTMs are effective in NLP
+Long-term dependencies: LSTMs can learn long-term dependencies, which is vital for understanding how words far apart in a sentence relate to each other. For example, an LSTM can remember the gender of a subject like "Dave" to correctly use the pronoun "his" later in a sentence.
+Selective memory: The internal "gates" (input, output, and forget) of an LSTM allow it to selectively remember or forget information from previous steps. This is a key improvement over standard RNNs and addresses the vanishing gradient problem.
+Handling long sequences: The ability to maintain a "cell state" through which information can flow makes LSTMs well-suited for processing long sequences of words that are common in natural language. 
+
+6.	What is speech recognition?
+Speech recognition, also known as automatic speech recognition (ASR), computer speech recognition or speech-to-text, is a capability that enables a program to process human speech into a written format.
+Various algorithms and computation techniques are used to recognize speech into text and improve the accuracy of transcription. Below are brief explanations of some of the most commonly used methods:
+
+Natural language processing (NLP): While NLP isn’t necessarily a specific algorithm used in speech recognition, it is the area of artificial intelligence which focuses on the interaction between humans and machines through language through speech and text. Many mobile devices incorporate speech recognition into their systems to conduct voice search—e.g. Siri—or provide more accessibility around texting. 
+
+Hidden markov models (HMM): Hidden Markov Models build on the Markov chain model, which stipulates that the probability of a given state hinges on the current state, not its prior states. While a Markov chain model is useful for observable events, such as text inputs, hidden markov models allow us to incorporate hidden events, such as part-of-speech tags, into a probabilistic model. They are utilized as sequence models within speech recognition, assigning labels to each unit—i.e. words, syllables, sentences, etc.—in the sequence. These labels create a mapping with the provided input, allowing it to determine the most appropriate label sequence.
+
+N-grams: This is the simplest type of language model (LM), which assigns probabilities to sentences or phrases. An N-gram is sequence of N-words. For example, “order the pizza” is a trigram or 3-gram and “please order the pizza” is a 4-gram. Grammar and the probability of certain word sequences are used to improve recognition and accuracy.
+
+Neural networks: Primarily leveraged for deep learning algorithms, neural networks process training data by mimicking the interconnectivity of the human brain through layers of nodes. Each node is made up of inputs, weights, a bias (or threshold) and an output. If that output value exceeds a given threshold, it “fires” or activates the node, passing data to the next layer in the network. Neural networks learn this mapping function through supervised learning, adjusting based on the loss function through the process of gradient descent. While neural networks tend to be more accurate and can accept more data, this comes at a performance efficiency cost as they tend to be slower to train compared to traditional language models.
+
+Speaker Diarization (SD): Speaker diarization algorithms identify and segment speech by speaker identity. This helps programs better distinguish individuals in a conversation and is frequently applied at call centers distinguishing customers and sales agents.
+
+7.	How do transformers improve NLP tasks?
+Natural Language Processing (NLP) is a field of computer science that deals with the interaction between computers and human (natural) languages. In recent years, there have been many breakthroughs and developments in NLP, thanks to the use of powerful machine learning models. One of the most important of these models is the Transformer.
+
+The Transformer has revolutionized the way data scientists work with text data. It is much faster and more efficient than previous models, and it can handle long-distance dependencies more effectively. This has made it possible to achieve state-of-the-art results on a wide range of NLP tasks, such as machine translation, text summarization, and question-answering.
+The Transformer is different from previous models in that it does not use recurrent neural networks (RNNs). Instead, it relies on self-attention to compute representations of its input and output sequences.
+
+Self-attention allows the Transformer to attend to all positions in the input sequence, regardless of their distance. This makes it possible for the Transformer to handle long-range dependencies more effectively than RNNs.
+
+The architecture of the Transformer is shown below. It consists of two main parts: the encoder and the decoder.
+
+The encoder reads the input sequence and creates a representation of it.
+The decoder uses the representation created by the encoder to generate the output sequence.
+Both the encoder and decoder are made up of a stack of self-attention layers. The self-attention layers allow the Transformer to attend to all positions in the input or output sequence, regardless of their distance.
+
+The above image is a superb illustration of Transformer’s architecture. Let’s first focus on the Encoder and Decoder parts only.
+Both the encoder and decoder are made up of a stack of self-attention layers. The self-attention layers allow the Transformer to attend to all positions in the input or output sequence, regardless of their distance.
+
+how transformers improve NLP tasks (proper explanation)
+
+Before transformers we used RNN, LSTM.
+
+Problem with them:
+
+They read sentence word by word, in order
+
+so they forget old words when sentence becomes large
+
+also training is slow (cannot parallel process properly)
+
+Now transformers came.
+
+Transformers use a mechanism called Self-Attention.
+
+Self-Attention is like this:
+
+for each word → transformer checks all the other words in the sentence and decides which words are important for the meaning.
+
+So it understands context better.
+
+Example:
+
+sentence: “He went to the bank to deposit money”
+
+Transformer looks at words like “deposit”, “money” and then understands that “bank” here means “financial bank”.
+This is why accuracy becomes better.
+
+How transformers improve NLP tasks? (points)
+
+understand context better because of self-attention
+
+handle long sentences better (do not forget long context)
+
+parallel processing → trains faster on GPU
+
+scale to huge models like BERT, GPT, so performance becomes very high
+
+work better for many tasks → translation, summarization, Q&A, chatbots
+
+8.	How are CNNs used in computer vision?
+CNN = Convolutional Neural Network.
+CNNs are mainly used to automatically learn patterns from images.
+
+Instead of a human deciding what features to extract (edges, corners, textures), CNN learns them by itself using filters / kernels.
+input image goes through many convolution layers
+
+each layer learns different features:
+
+early layers → detect edges, lines
+
+mid layers → detect textures or shapes (eyes, nose)
+
+deep layers → detect complete objects (faces, cars etc.)
+
+So the deeper you go → more complex features are learned.
+| Reason                 | Explanation                                              |
+| ---------------------- | -------------------------------------------------------- |
+| Local feature learning | filters look at small regions of the image               |
+| Parameter sharing      | same filter slides (convolves) everywhere → less weights |
+| Translation invariance | can detect object anywhere in the image                  |
+
+| Task                 | How CNN helps                            |
+| -------------------- | ---------------------------------------- |
+| Image classification | identify what object is in the image     |
+| Object detection     | detect objects + draw bounding boxes     |
+| Face recognition     | match face features                      |
+| Medical imaging      | detect tumors, fractures                 |
+| Self driving cars    | detect roads, pedestrians, traffic signs |
+
+UNIT 5
+1.	What is a convolutional neural network (CNN)?
+Convolutional Neural Network (CNN) is an advanced version of artificial neural networks (ANNs), primarily designed to extract features from grid-like matrix datasets. This is particularly useful for visual datasets such as images or videos, where data patterns play a crucial role. CNNs are widely used in computer vision applications due to their effectiveness in processing visual data.
+
+CNNs consist of multiple layers like the input layer, Convolutional layer, pooling layer, and fully connected layers. 
+
+Key Components
+Convolutional Layers: These layers apply convolutional operations to input images using filters or kernels to detect features such as edges, textures and more complex patterns. Convolutional operations help preserve the spatial relationships between pixels.
+Pooling Layers: They downsample the spatial dimensions of the input, reducing the computational complexity and the number of parameters in the network. Max pooling is a common pooling operation where we select a maximum value from a group of neighboring pixels.
+Activation Functions: They introduce non-linearity to the model by allowing it to learn more complex relationships in the data.
+Fully Connected Layers: These layers are responsible for making predictions based on the high-level features learned by the previous layers. They connect every neuron in one layer to every neuron in the next layer.
+
+Working of CNN
+Input Image: CNN receives an input image which is preprocessed to ensure uniformity in size and format.
+Convolutional Layers: Filters are applied to the input image to extract features like edges, textures and shapes.
+Pooling Layers: The feature maps generated by the convolutional layers are downsampled to reduce dimensionality.
+Fully Connected Layers: The downsampled feature maps are passed through fully connected layers to produce the final output, such as a classification label.
+Output: The CNN outputs a prediction, such as the class of the image.
+
+2.	What is a kernel or filter in CNN?
+Kernels are small matrices used for feature extraction from input data such as images. Each kernel is designed to detect specific features which allows CNN to understand and interpret content of the image. Values of kernels are learned during training process using backpropagation that updates the kernel values to better detect important features of image. This helps CNN in tasks like image classification, object detection and other computer vision tasks by recognizing patterns in different ways.
+1. Function of Kernels
+Kernels slide over the input data like a image and helps in performing element-wise multiplication followed by a summation of the results. This process extracts specific features from the input such as edges, corners or textures which depends on the kernel’s values.
+
+2. Kernel Structure
+Size: Kernels are usually small like 3x3, 5x5 or 7x7 matrices which is very small as compared to the size of input data. Size of kernel affects how much input data is considered at one time for any given feature extraction operation.
+Depth: Depth of a kernel depends on the depth of the input volume. For example if the input data is a color image with three color channels (RGB) the kernel will also have three channels.
+3. Learning Process
+Values in kernels are not predetermined but are learned during the training process through backpropagation and gradient descent which adjusts kernel values to minimize loss function of the network. This allows the kernels to become better at extracting useful features.
+
+4. Feature Maps
+Output of applying a kernel to a image is called a feature map or activation map. They shows specific features which were detected in the input data. For example one kernel might be designed to detect vertical edges and when applied to the image, it generates a feature map that highlights areas where vertical edges are present.
+
+5. Stacking Multiple Kernels
+Multiple kernels are used at each layer of a CNN which allows network to extract various features at each layer. The outputs from these kernels can be stacked to form the input for the next layer helps in creating a hierarchy of features from simple to complex as we move deeper into the network.
+
+3.	What is pooling?
+Pooling, also known as downsampling or subsampling, is an operation typically applied after a convolutional layer. Its primary goal is to reduce the spatial dimensions (width and height) of the input feature map while retaining the most important information.
+
+
+Key Purposes of Pooling:
+Dimensionality Reduction: It decreases the size of the feature maps, which in turn reduces the computational load and memory requirements of the network.
+
+Translation Invariance: It helps the model become more robust to small shifts or distortions in the input image. Even if the features (like an edge) are detected in a slightly different location, the pooled output remains similar.
+
+Overfitting Prevention: By summarizing features and reducing parameters, it provides a form of regularization that can help prevent overfitting.
+
+Common Types:
+Max Pooling: Selects the maximum value within the pooling window (or filter). This is the most common type and emphasizes the most salient features (e.g., sharp edges).
+
+
+Average Pooling: Computes the average value within the pooling window. This tends to smooth out the features.
+
+4.	Explain stride and padding in CNN.
+Of course! Pooling, stride, and padding are key concepts in Convolutional Neural Networks (CNNs) that control the size and feature representation of the data as it moves through the network.
+
+💻 What is Pooling?
+Pooling, also known as downsampling or subsampling, is an operation typically applied after a convolutional layer. Its primary goal is to reduce the spatial dimensions (width and height) of the input feature map while retaining the most important information.
+
+
+Key Purposes of Pooling:
+Dimensionality Reduction: It decreases the size of the feature maps, which in turn reduces the computational load and memory requirements of the network.
+
+Translation Invariance: It helps the model become more robust to small shifts or distortions in the input image. Even if the features (like an edge) are detected in a slightly different location, the pooled output remains similar.
+
+Overfitting Prevention: By summarizing features and reducing parameters, it provides a form of regularization that can help prevent overfitting.
+
+Common Types:
+Max Pooling: Selects the maximum value within the pooling window (or filter). This is the most common type and emphasizes the most salient features (e.g., sharp edges).
+
+
+Average Pooling: Computes the average value within the pooling window. This tends to smooth out the features.
+
+📏 Stride and Padding in CNN
+Stride and Padding are hyperparameters that influence the output size of both convolutional and pooling layers.
+
+🚶 Stride
+The stride defines the step size or the number of pixels the filter (or kernel) shifts across the input feature map during the convolution or pooling operation.
+
+Stride of 1 (Default): The filter moves one pixel at a time, resulting in a large overlap between consecutive receptive fields and a larger output feature map.
+
+Stride > 1 (e.g., Stride of 2): The filter skips pixels, causing a downsampling effect and producing a smaller output feature map. This is often used to reduce computation and focus on higher-level features.
+
+
+🖼️ Padding
+Padding involves adding extra pixels (usually with a value of zero, known as Zero Padding) around the border of the input feature map before the convolution or pooling operation.
+
+Issue without Padding (Valid Padding): Without padding, the output size shrinks with each layer. Additionally, pixels on the borders of the image are included in fewer convolutions than those in the center, meaning boundary information might be lost or underrepresented.
+
+
+Purpose of Padding (Same Padding):
+
+Preserve Spatial Dimensions: Padding is used to ensure that the output feature map has the same size as the input feature map, preventing the rapid shrinkage of the feature map dimensions as the data passes through many layers.
+
+Utilize Border Information: By increasing the effective size of the input, padding ensures that the pixels on the edges and corners are included in the convolution operation an adequate number of times.
+
+5.	What is a recurrent neural network (RNN)?
+A Recurrent Neural Network (RNN) is a class of artificial neural network specifically designed to process sequential data, where the order of information matters. Unlike traditional feedforward networks that treat inputs independently, RNNs have recurrent connections—a feedback loop that allows information from previous time steps to influence the current step.
+
+
+This structure gives the RNN an internal memory (called the hidden state), enabling it to maintain context.
+
+Key Feature: The network uses the current input and the hidden state from the previous step to generate the current output and update its memory.
+
+Applications: Machine translation, speech recognition, time-series forecasting, and text generation.
+
+Major Limitation: Simple RNNs suffer from the vanishing gradient problem when dealing with long sequences. During training, the influence of very early inputs on later outputs (long-term dependencies) fades away, making the network have effectively only a short-term memory.
+
+6.	What is LSTM?
+Long Short-Term Memory (LSTM) is an advanced type of Recurrent Neural Network (RNN) architecture explicitly designed to overcome the vanishing gradient problem that plagues simple RNNs.
+
+LSTMs are superior at learning and retaining long-term dependencies in sequential data. They achieve this by incorporating a more complex internal structure called the LSTM cell or memory cell.
+Key Components of an LSTM Cell:Instead of just a single hidden state, the LSTM cell manages information using several specialized mechanisms called gates:11Cell State (12$\mathbf{C}_t$): This acts as the network's long-term memory.13 Information flows along this state relatively unchanged, which helps prevent gradients from vanishing.14Forget Gate ($\mathbf{f}_t$): Decides what information from the previous cell state (15$\mathbf{C}_{t-1}$) should be discarded or forgotten.16Input Gate ($\mathbf{i}_t$): Determines what new information from the current input (17$\mathbf{x}_t$) should be stored in the cell state.18Output Gate (19$\mathbf{o}_t$): Controls what parts of the updated cell state are passed on to become the hidden state (20$\mathbf{h}_t$), which serves as the short-term memory and is output at the current time step.21
+
+7.	What is encoder–decoder architecture?
+🏗️ Encoder-Decoder Architecture
+The Encoder-Decoder Architecture is a foundational deep learning framework, especially popular in Sequence-to-Sequence (Seq2Seq) learning tasks. It consists of two main interconnected neural network components:
+
+
+The Encoder: Processes the entire input sequence (e.g., a sentence in English) step-by-step. Its job is to compress all the information into a dense, fixed-size numerical representation, often called the context vector or thought vector. This vector summarizes the entire input.
+
+The Decoder: Takes the context vector from the encoder and uses it to generate the output sequence (e.g., the translated sentence in French) one element at a time (auto-regressively).
+
+8.	What are transformers?
